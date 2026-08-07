@@ -460,9 +460,10 @@ function makeJob(meta, listing, detail) {
   if (Math.max(jacob.score, madison.score) < matching.minimum_fit_score) return null;
   if (wrongCycle(analysisText)) return null;
 
+  const start = extractStart(analysisText);
+  if (start === matching.cycle.default_start_label) return null;
   const opened = extractOpened(combinedText, listing);
-  const explicitTarget = /2027|2027[–-]28/i.test(analysisText);
-  if (opened < matching.cycle.earliest_posting_date && !explicitTarget) return null;
+  if (opened < matching.cycle.earliest_posting_date) return null;
 
   const sourceId = extractSourceId(meta, listing, $, detail.html);
   const unit = deriveAcademicUnit(meta, listing, $, combinedText);
@@ -487,7 +488,7 @@ function makeJob(meta, listing, detail) {
     source: meta.key,
     sourceUrl: normalizeUrl(detail.url),
     opened,
-    start: extractStart(analysisText),
+    start,
     deadline: extractDeadline(analysisText),
     ...(extractReviewDate(analysisText) ? { reviewDate: extractReviewDate(analysisText) } : {}),
     summary: relevantSummary(analysisText, matchedConcepts),

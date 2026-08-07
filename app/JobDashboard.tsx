@@ -327,7 +327,7 @@ export function JobDashboard() {
               </div>
               <div>
                 <strong>Eligibility</strong>
-                <span>Assistant Professor, or an open-rank search accepting assistant-level applicants. Confirmed Fall 2027 roles are labeled; plausible 2027-cycle roles stay visible with a verification flag when the posting omits its start date.</span>
+                <span>Assistant Professor, or an open-rank search accepting assistant-level applicants. Automated additions must explicitly identify a Fall 2027 or 2027–28 start; earlier manually reviewed roles with unstated timing remain clearly flagged for verification.</span>
               </div>
             </div>
           </details>

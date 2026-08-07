@@ -21,7 +21,7 @@ Live dashboard: <https://jacobjameson.com/faculty-job-tracker/>
 
 - **Jacob:** healthcare operations and delivery; causal inference and real-world evidence; decision modeling, reinforcement learning, and personalized medicine; health and public policy.
 - **Madison:** responsible AI and algorithmic fairness; inequality and discrimination; computational methods and experiments; healthcare, lending, criminal justice, and education.
-- **Eligibility:** assistant-professor searches and open-rank searches that accept assistant-level applicants. Confirmed Fall 2027 starts are labeled; plausible 2027-cycle roles remain visible with a verification warning when the source omits the start date.
+- **Eligibility:** assistant-professor searches and open-rank searches that accept assistant-level applicants. Automated additions require an explicit Fall 2027 or 2027–28 start. Earlier manually reviewed roles with unstated timing remain visible with a verification warning so the append-only policy does not silently erase them.
 
 ## Loss-resistant refresh policy
 
@@ -63,7 +63,7 @@ To receive email, create a free Feedrabbit subscription at <https://feedrabbit.c
 GitHub Actions runs `.github/workflows/refresh-jobs.yml` every day at **15:15 UTC** (8:15 a.m. Pacific during daylight time, 7:15 a.m. during standard time). It:
 
 1. Scans only the six approved hostnames in `config/sources.json`.
-2. Keeps only assistant-professor and assistant-eligible open-rank searches matching at least one profile and the Fall 2027 cycle.
+2. Keeps only assistant-professor and assistant-eligible open-rank searches matching at least one profile and explicitly stating a Fall 2027 or 2027–28 start.
 3. Appends newly admitted jobs without deleting or replacing earlier jobs.
 4. Regenerates the RSS feed and `data/refresh-report.json`.
 5. Runs lint, tests, and both production builds before committing data and deploying Pages.
