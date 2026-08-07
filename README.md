@@ -2,6 +2,8 @@
 
 A two-person faculty-job dashboard for Jacob and Madison. The discovery queue contains positions relevant to at least one candidate; each candidate can save a position to a separate, private, browser-local tracker.
 
+Live dashboard: <https://jacobjameson.com/faculty-job-tracker/>
+
 ## Current behavior
 
 - Broad opportunities from the six approved university sources
