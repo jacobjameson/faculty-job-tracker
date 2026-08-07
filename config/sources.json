@@ -1,0 +1,15 @@
+{
+  "approved_sources": [
+    {
+      "name": "UC Berkeley Academic Personnel Recruit",
+      "listing_url": "https://aprecruit.berkeley.edu/apply",
+      "allowed_hostname": "aprecruit.berkeley.edu"
+    },
+    {
+      "name": "Stanford Faculty Positions",
+      "listing_url": "https://facultypositions.stanford.edu/jobs/search",
+      "allowed_hostname": "facultypositions.stanford.edu"
+    }
+  ],
+  "policy": "Collection must not request or import listings from any hostname not included above. New sources require an explicit user-provided URL and a reviewed configuration change."
+}

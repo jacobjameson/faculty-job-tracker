@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Jacob + Madison Faculty Job Matches</title>
+    <link>https://jacobjameson.github.io/faculty-job-tracker/</link>
+    <description>Assistant-professor and open-rank matches from Berkeley AP Recruit and Stanford Faculty Positions.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Aug 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Stanford — Pharmacoepidemiology</title>
+      <link>https://facultypositions.stanford.edu/jobs/pharmacoepidemiology-assistant-associate-or-full-professor-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-pharmacoepidemiology</guid>
+      <pubDate>Fri, 26 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Open-rank search in real-world evidence, causal inference, and comparative effectiveness. Strongest fit: Jacob.</description>
+    </item>
+    <item>
+      <title>Stanford — Surgery Policy Improvement Research &amp; Education</title>
+      <link>https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-stanford-surgery-policy-improvement-research-education-s-spire-center-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-sspire</guid>
+      <pubDate>Thu, 25 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Open-rank search in AI-enabled surgical policy, outcomes, and decision-making. Fit: Jacob and Madison.</description>
+    </item>
+    <item>
+      <title>Stanford — Communication: Media and Politics</title>
+      <link>https://facultypositions.stanford.edu/jobs/assistant-professor-in-communication-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-communication</guid>
+      <pubDate>Fri, 26 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search in media, politics, data science, and computational or experimental methods. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>Stanford — Health Policy (Health Economist)</title>
+      <link>https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-of-health-policy-health-economist-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-495011</guid>
+      <pubDate>Fri, 24 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Open-rank search in health systems, delivery, payment, digital health, and AI. Strongest fit: Jacob.</description>
+    </item>
+    <item>
+      <title>Berkeley — Demography, Open Field</title>
+      <link>https://aprecruit.berkeley.edu/JPF05488</link>
+      <guid isPermaLink="false">berkeley-JPF05488</guid>
+      <pubDate>Mon, 03 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search including computational demography, health and aging, migration, and population dynamics. Fit: Jacob and Madison.</description>
+    </item>
+    <item>
+      <title>Berkeley Haas — Quantitative Marketing</title>
+      <link>https://aprecruit.berkeley.edu/JPF05420</link>
+      <guid isPermaLink="false">berkeley-JPF05420</guid>
+      <pubDate>Tue, 21 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search in analytics, digital markets, and quantitative methods. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>Stanford GSE — Education in a Rapidly Changing World</title>
+      <link>https://facultypositions.stanford.edu/jobs/open-rank-faculty-position-social-sciences-humanities-of-education-in-a-rapidly-changing-world-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-gse-rapid-change</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Open-rank search in education, inequality, and technological change. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>Berkeley Haas — Organizations, Entrepreneurship and Innovation</title>
+      <link>https://aprecruit.berkeley.edu/JPF05417</link>
+      <guid isPermaLink="false">berkeley-JPF05417</guid>
+      <pubDate>Tue, 21 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search in organizations, innovation, performance, and inequality.</description>
+    </item>
+    <item>
+      <title>Berkeley — Sociology, Open Field</title>
+      <link>https://aprecruit.berkeley.edu/JPF05416</link>
+      <guid isPermaLink="false">berkeley-JPF05416</guid>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search with no restriction on specialization. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>Stanford — Political Science, Open Field</title>
+      <link>https://facultypositions.stanford.edu/jobs/open-field-open-rank-faculty-position-in-political-science-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-political-science-open</guid>
+      <pubDate>Mon, 06 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Open-field, open-rank Political Science search. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>Berkeley — American Politics or Public Law</title>
+      <link>https://aprecruit.berkeley.edu/JPF05408</link>
+      <guid isPermaLink="false">berkeley-JPF05408</guid>
+      <pubDate>Tue, 28 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search in American politics or public law. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>Berkeley Haas — Finance</title>
+      <link>https://aprecruit.berkeley.edu/JPF05422</link>
+      <guid isPermaLink="false">berkeley-JPF05422</guid>
+      <pubDate>Mon, 27 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search spanning banking, credit, regulation, mortgages, and insurance. Strongest fit: Madison.</description>
+    </item>
+  </channel>
+</rss>
