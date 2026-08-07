@@ -9,6 +9,26 @@
       "name": "Stanford Faculty Positions",
       "listing_url": "https://facultypositions.stanford.edu/jobs/search",
       "allowed_hostname": "facultypositions.stanford.edu"
+    },
+    {
+      "name": "UCLA Academic Recruit",
+      "listing_url": "https://recruit.apo.ucla.edu/apply",
+      "allowed_hostname": "recruit.apo.ucla.edu"
+    },
+    {
+      "name": "USC Faculty Careers",
+      "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
+      "allowed_hostname": "usccareers.usc.edu"
+    },
+    {
+      "name": "Columbia Academic Search and Recruiting",
+      "listing_url": "https://academic.careers.columbia.edu",
+      "allowed_hostname": "academic.careers.columbia.edu"
+    },
+    {
+      "name": "Northwestern Careers",
+      "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
+      "allowed_hostname": "careers.northwestern.edu"
     }
   ],
   "policy": "Collection must not request or import listings from any hostname not included above. New sources require an explicit user-provided URL and a reviewed configuration change."

@@ -37,18 +37,24 @@ test("server-renders the faculty search dashboard", async () => {
   assert.match(html, /Berkeley/);
   assert.match(html, /Stanford/);
   assert.match(html, /Matching criteria/i);
-  assert.match(html, /12<!-- --> curated openings|12<\/strong><span>curated openings/);
+  assert.match(html, /18<!-- --> curated openings|18<\/strong><span>curated openings/);
+  assert.match(html, /Faculty Positions in Industrial Engineering/);
+  assert.match(html, /Health Policy \(Health Economist\)/);
+  assert.match(html, /Education in a Rapidly Changing World/);
+  assert.match(html, /Research Assistant Professor of Health Policy/);
+  assert.match(html, /Health Behavior Data Analytics/);
+  assert.match(html, /Not interested/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
 
 test("publishes a valid RSS feed for the curated matches", async () => {
   const rss = await readFile(new URL("../public/jobs.xml", import.meta.url), "utf8");
   assert.match(rss, /<rss version="2\.0">/);
-  assert.equal((rss.match(/<item>/g) ?? []).length, 12);
+  assert.equal((rss.match(/<item>/g) ?? []).length, 18);
   assert.doesNotMatch(rss, /JPF05397/);
 });
 
-test("restricts collection to the two approved sources", async () => {
+test("restricts collection to the approved university sources", async () => {
   const sourceText = await readFile(
     new URL("../config/sources.json", import.meta.url),
     "utf8",
@@ -57,22 +63,65 @@ test("restricts collection to the two approved sources", async () => {
 
   assert.deepEqual(
     sourceConfig.approved_sources.map((source) => source.allowed_hostname).sort(),
-    ["aprecruit.berkeley.edu", "facultypositions.stanford.edu"],
+    [
+      "academic.careers.columbia.edu",
+      "aprecruit.berkeley.edu",
+      "careers.northwestern.edu",
+      "facultypositions.stanford.edu",
+      "recruit.apo.ucla.edu",
+      "usccareers.usc.edu",
+    ],
   );
 
   const dashboard = await readFile(
     new URL("../app/JobDashboard.tsx", import.meta.url),
     "utf8",
   );
-  const postingUrls = dashboard.match(/https:\/\/[^"\s]+/g) ?? [];
+  assert.equal(
+    (dashboard.match(/^    id:/gm) ?? []).length,
+    (dashboard.match(/^    start:/gm) ?? []).length,
+    "every curated job must include a Fall 2027 start or a clearly labeled expectation",
+  );
+  const postingUrls = [...dashboard.matchAll(/sourceUrl:\s*"([^"]+)"/g)].map(
+    (match) => match[1],
+  );
   const postingHosts = new Set(
-    postingUrls
-      .filter((url) => url.includes("/JPF") || url.includes("/jobs/"))
-      .map((url) => new URL(url).hostname),
+    postingUrls.map((url) => new URL(url).hostname),
   );
 
   assert.deepEqual(
     [...postingHosts].sort(),
-    ["aprecruit.berkeley.edu", "facultypositions.stanford.edu"],
+    [
+      "aprecruit.berkeley.edu",
+      "careers.northwestern.edu",
+      "facultypositions.stanford.edu",
+      "recruit.apo.ucla.edu",
+      "usccareers.usc.edu",
+    ],
+  );
+  assert.ok([...postingHosts].every((host) => sourceConfig.approved_sources.some(
+    (source) => source.allowed_hostname === host,
+  )));
+});
+
+test("keeps the job catalog append-only across refreshes", async () => {
+  const dashboard = await readFile(
+    new URL("../app/JobDashboard.tsx", import.meta.url),
+    "utf8",
+  );
+  const historyText = await readFile(
+    new URL("../config/catalog-history.json", import.meta.url),
+    "utf8",
+  );
+  const history = JSON.parse(historyText);
+  const currentIds = [...dashboard.matchAll(/^    id: "([^"]+)",$/gm)].map(
+    (match) => match[1],
+  );
+
+  assert.equal(new Set(currentIds).size, currentIds.length, "catalog IDs must be unique");
+  assert.deepEqual(
+    history.job_ids.filter((jobId) => !currentIds.includes(jobId)),
+    [],
+    "a refresh must not silently remove a previously admitted job",
   );
 });

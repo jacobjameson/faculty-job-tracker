@@ -3,22 +3,36 @@
   <channel>
     <title>Jacob + Madison Faculty Job Matches</title>
     <link>https://jacobjameson.github.io/faculty-job-tracker/</link>
-    <description>Assistant-professor and open-rank matches from Berkeley AP Recruit and Stanford Faculty Positions.</description>
+    <description>Broad assistant-professor and assistant-eligible open-rank matches for the Fall 2027 cycle from six approved university sources. Unstated start dates are flagged for verification.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 12:00:00 GMT</lastBuildDate>
     <item>
       <title>Stanford — Pharmacoepidemiology</title>
       <link>https://facultypositions.stanford.edu/jobs/pharmacoepidemiology-assistant-associate-or-full-professor-stanford-university-california-united-states</link>
       <guid isPermaLink="false">stanford-pharmacoepidemiology</guid>
       <pubDate>Fri, 26 Jun 2026 12:00:00 GMT</pubDate>
-      <description>Open-rank search in real-world evidence, causal inference, and comparative effectiveness. Strongest fit: Jacob.</description>
+      <description>Open-rank search in real-world evidence, causal inference, and comparative effectiveness. Strongest fit: Jacob. Fall 2027 timing requires verification.</description>
     </item>
     <item>
       <title>Stanford — Surgery Policy Improvement Research &amp; Education</title>
       <link>https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-stanford-surgery-policy-improvement-research-education-s-spire-center-stanford-university-california-united-states</link>
       <guid isPermaLink="false">stanford-sspire</guid>
       <pubDate>Thu, 25 Jun 2026 12:00:00 GMT</pubDate>
-      <description>Open-rank search in AI-enabled surgical policy, outcomes, and decision-making. Fit: Jacob and Madison.</description>
+      <description>Open-rank search in AI-enabled surgical policy, outcomes, and decision-making. Fit: Jacob and Madison. Fall 2027 timing requires verification.</description>
+    </item>
+    <item>
+      <title>Stanford — Health Policy (Health Economist)</title>
+      <link>https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-of-health-policy-health-economist-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-495011</guid>
+      <pubDate>Fri, 24 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Open-rank search in health systems, delivery, payment, digital health, and AI. Strongest fit: Jacob. Fall 2027 timing requires verification.</description>
+    </item>
+    <item>
+      <title>Stanford GSE — Education in a Rapidly Changing World</title>
+      <link>https://facultypositions.stanford.edu/jobs/open-rank-faculty-position-social-sciences-humanities-of-education-in-a-rapidly-changing-world-stanford-university-california-united-states</link>
+      <guid isPermaLink="false">stanford-gse-rapid-change</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Open-rank search in education, inequality, and technological change. Strongest fit: Madison. Fall 2027 timing requires verification.</description>
     </item>
     <item>
       <title>Stanford — Communication: Media and Politics</title>
@@ -26,13 +40,6 @@
       <guid isPermaLink="false">stanford-communication</guid>
       <pubDate>Fri, 26 Jun 2026 12:00:00 GMT</pubDate>
       <description>Assistant Professor search in media, politics, data science, and computational or experimental methods. Strongest fit: Madison.</description>
-    </item>
-    <item>
-      <title>Stanford — Health Policy (Health Economist)</title>
-      <link>https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-of-health-policy-health-economist-stanford-university-california-united-states</link>
-      <guid isPermaLink="false">stanford-495011</guid>
-      <pubDate>Fri, 24 Jul 2026 12:00:00 GMT</pubDate>
-      <description>Open-rank search in health systems, delivery, payment, digital health, and AI. Strongest fit: Jacob.</description>
     </item>
     <item>
       <title>Berkeley — Demography, Open Field</title>
@@ -47,13 +54,6 @@
       <guid isPermaLink="false">berkeley-JPF05420</guid>
       <pubDate>Tue, 21 Jul 2026 12:00:00 GMT</pubDate>
       <description>Assistant Professor search in analytics, digital markets, and quantitative methods. Strongest fit: Madison.</description>
-    </item>
-    <item>
-      <title>Stanford GSE — Education in a Rapidly Changing World</title>
-      <link>https://facultypositions.stanford.edu/jobs/open-rank-faculty-position-social-sciences-humanities-of-education-in-a-rapidly-changing-world-stanford-university-california-united-states</link>
-      <guid isPermaLink="false">stanford-gse-rapid-change</guid>
-      <pubDate>Tue, 04 Aug 2026 12:00:00 GMT</pubDate>
-      <description>Open-rank search in education, inequality, and technological change. Strongest fit: Madison.</description>
     </item>
     <item>
       <title>Berkeley Haas — Organizations, Entrepreneurship and Innovation</title>
@@ -89,6 +89,48 @@
       <guid isPermaLink="false">berkeley-JPF05422</guid>
       <pubDate>Mon, 27 Jul 2026 12:00:00 GMT</pubDate>
       <description>Assistant Professor search spanning banking, credit, regulation, mortgages, and insurance. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>UCLA Law — Open Field</title>
+      <link>https://recruit.apo.ucla.edu/JPF11179</link>
+      <guid isPermaLink="false">ucla-JPF11179</guid>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Entry-level tenure-track law search beginning July 1, 2027. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>USC Price/Schaeffer — Research Assistant Professor of Health Policy &amp; Management</title>
+      <link>https://usccareers.usc.edu/job/los-angeles/research-assistant-professor-of-health-policy-and-management/1209/98163986400</link>
+      <guid isPermaLink="false">usc-REQ20173456</guid>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Research-line Assistant Professor role in health policy, health economics, healthcare delivery, and policy-relevant research. Strongest fit: Jacob. Fall 2027 timing requires verification.</description>
+    </item>
+    <item>
+      <title>USC Keck — Health Behavior Data Analytics</title>
+      <link>https://usccareers.usc.edu/job/los-angeles/assistant-professor-of-clinical-population-and-public-health-sciences/1209/96857551280</link>
+      <guid isPermaLink="false">usc-REQ20174817</guid>
+      <pubDate>Wed, 24 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Assistant Professor search in computational public health, digital platforms, experiments, networks, NLP, and machine learning. Official source is currently unavailable; verify before applying.</description>
+    </item>
+    <item>
+      <title>Northwestern IEMS — Two Faculty Positions</title>
+      <link>https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_JBPST_FL&amp;Action=U&amp;FOCUS=Applicant&amp;SiteId=1&amp;JobOpeningId=54185&amp;PostingSeq=1</link>
+      <guid isPermaLink="false">northwestern-54185</guid>
+      <pubDate>Fri, 07 Aug 2026 12:00:00 GMT</pubDate>
+      <description>One Assistant Professor and one open-rank tenure-line search in optimization, AI and machine learning, financial engineering, and healthcare operations. Strong fit for Jacob and Madison; expected Fall 2027 start should be verified.</description>
+    </item>
+    <item>
+      <title>Northwestern Kellogg — AI and Innovation</title>
+      <link>https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Action=U&amp;FOCUS=Applicant&amp;JobOpeningId=53835&amp;Page=HRS_APP_JBPST_FL&amp;PostingSeq=1&amp;SiteId=1&amp;page=HRS_APP_JBPST_FL</link>
+      <guid isPermaLink="false">northwestern-53835</guid>
+      <pubDate>Fri, 07 Aug 2026 12:00:00 GMT</pubDate>
+      <description>Assistant or untenured Associate Professor search in AI, innovation, organizational decisions, and networks for academic year 2027–28. Strongest fit: Madison.</description>
+    </item>
+    <item>
+      <title>Stanford — Comparative Politics</title>
+      <link>https://facultypositions.stanford.edu/jobs/comparative-politics-open-rank-faculty-position-in-political-science-stanford-university-california-united-states-e90f6365-53c2-4dcb-8a1a-a5f1b07235c8</link>
+      <guid isPermaLink="false">stanford-comparative-politics</guid>
+      <pubDate>Mon, 06 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Open-rank Comparative Politics search beginning September 1, 2027. Strongest fit: Madison.</description>
     </item>
   </channel>
 </rss>

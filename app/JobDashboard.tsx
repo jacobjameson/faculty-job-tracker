@@ -13,9 +13,10 @@ type Job = {
   title: string;
   rank: string;
   location: string;
-  source: "Berkeley" | "Stanford";
+  source: "Berkeley" | "Stanford" | "UCLA" | "USC" | "Columbia" | "Northwestern";
   sourceUrl: string;
   opened: string;
+  start: string;
   deadline: string | null;
   reviewDate?: string;
   summary: string;
@@ -37,7 +38,8 @@ type TrackerEntry = {
 type TrackerState = Record<Person, TrackerEntry[]>;
 
 const STORAGE_KEY = "joint-faculty-search-v1";
-const observedAt = "August 6, 2026";
+const DISMISSED_KEY = "joint-faculty-search-dismissed-v1";
+const observedAt = "August 7, 2026";
 
 const jobs: Job[] = [
   {
@@ -52,6 +54,7 @@ const jobs: Job[] = [
     sourceUrl:
       "https://facultypositions.stanford.edu/jobs/pharmacoepidemiology-assistant-associate-or-full-professor-stanford-university-california-united-states",
     opened: "2026-06-26",
+    start: "Not stated · verify Fall 2027 timing",
     deadline: null,
     summary:
       "Real-world evidence search emphasizing large healthcare databases, causal inference, comparative effectiveness, and quantitative methods.",
@@ -68,8 +71,8 @@ const jobs: Job[] = [
       "Brief teaching and mentoring statement",
       "Up to three representative publications",
       "Names and contact information for at least three referees",
-      "Deadline is not stated on the posting; verify status directly before applying",
     ],
+    note: "The official posting does not state a start date or deadline. Kept in the broad catalog; verify Fall 2027 timing and current status before applying.",
   },
   {
     id: "stanford-sspire",
@@ -83,6 +86,7 @@ const jobs: Job[] = [
     sourceUrl:
       "https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-stanford-surgery-policy-improvement-research-education-s-spire-center-stanford-university-california-united-states",
     opened: "2026-06-25",
+    start: "Not stated · verify Fall 2027 timing",
     deadline: null,
     summary:
       "AI-enabled surgical policy and outcomes search focused on decision-making, patient outcomes, implementation, and multidisciplinary collaboration.",
@@ -97,8 +101,69 @@ const jobs: Job[] = [
       "Brief letter outlining interests",
       "Names of three references; references will not be contacted without approval",
       "PhD in an AI-related quantitative field for tenure-line and non-tenure research-line applicants",
-      "Deadline is not stated on the posting; verify status directly before applying",
     ],
+    note: "The official posting does not state a start date or deadline. Kept in the broad catalog; verify Fall 2027 timing and current status before applying.",
+  },
+  {
+    id: "stanford-495011",
+    institution: "Stanford University",
+    school: "School of Medicine",
+    department: "Health Policy",
+    title: "Assistant, Associate, or Full Professor of Health Policy (Health Economist)",
+    rank: "Open rank · tenure or medical line",
+    location: "Stanford, CA",
+    source: "Stanford",
+    sourceUrl:
+      "https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-of-health-policy-health-economist-stanford-university-california-united-states",
+    opened: "2026-07-24",
+    start: "Not stated · likely Fall 2027 cycle",
+    deadline: "2026-10-25",
+    summary:
+      "Health economics search spanning health systems, delivery, payment, digital health, AI, population health, and related policy areas.",
+    tags: ["Health policy", "Health systems", "Economics", "AI & digital health"],
+    fit: { jacob: 90, madison: 68 },
+    fitReason: {
+      jacob: "Direct overlap with healthcare delivery, health systems, and operations-oriented policy research.",
+      madison: "The call explicitly includes artificial intelligence and digital health, although it is centered on health economics.",
+    },
+    requirements: [
+      "Curriculum vitae",
+      "One research paper, published or unpublished",
+      "Letter describing research interests and teaching experience",
+      "Three references: letters for assistant-level candidates; names and emails may be used for senior candidates",
+    ],
+    note: "The official posting does not print a start date. Its 2026 application deadline makes Fall 2027 plausible, so it remains visible with a verification flag.",
+  },
+  {
+    id: "stanford-gse-rapid-change",
+    institution: "Stanford University",
+    school: "Graduate School of Education",
+    department: "Graduate School of Education",
+    title: "Open Rank Faculty — Education in a Rapidly Changing World",
+    rank: "Open rank · university tenure line",
+    location: "Stanford, CA",
+    source: "Stanford",
+    sourceUrl:
+      "https://facultypositions.stanford.edu/jobs/open-rank-faculty-position-social-sciences-humanities-of-education-in-a-rapidly-changing-world-stanford-university-california-united-states",
+    opened: "2026-08-04",
+    start: "Not stated · likely Fall 2027 cycle",
+    deadline: "2026-10-15",
+    summary:
+      "Broad social-science search focused on education amid inequality, polarization, technological innovation, and societal change.",
+    tags: ["Education", "Technology", "Inequality", "Social science"],
+    fit: { jacob: 35, madison: 84 },
+    fitReason: {
+      jacob: "Only a secondary fit unless health-policy methods are paired with a central education question.",
+      madison: "Strong overlap with AI in education, inequality, institutions, and technology-driven social change.",
+    },
+    requirements: [
+      "Brief cover letter",
+      "Combined research and teaching statement, no more than three pages",
+      "Curriculum vitae",
+      "Three scholarly publications or well-developed papers",
+      "Names of three references; letters are requested on submission for non-tenured applicants",
+    ],
+    note: "The official posting does not print a start date. Its 2026 application deadline makes Fall 2027 plausible, so it remains visible with a verification flag.",
   },
   {
     id: "stanford-communication",
@@ -112,6 +177,7 @@ const jobs: Job[] = [
     sourceUrl:
       "https://facultypositions.stanford.edu/jobs/assistant-professor-in-communication-stanford-university-california-united-states",
     opened: "2026-06-26",
+    start: "September 1, 2027",
     deadline: "2026-12-01",
     reviewDate: "2026-10-01",
     summary:
@@ -131,34 +197,6 @@ const jobs: Job[] = [
     ],
   },
   {
-    id: "stanford-495011",
-    institution: "Stanford University",
-    school: "School of Medicine",
-    department: "Health Policy",
-    title: "Assistant, Associate, or Full Professor of Health Policy (Health Economist)",
-    rank: "Open rank · tenure or medical line",
-    location: "Stanford, CA",
-    source: "Stanford",
-    sourceUrl:
-      "https://facultypositions.stanford.edu/jobs/assistant-associate-or-full-professor-of-health-policy-health-economist-stanford-university-california-united-states",
-    opened: "2026-07-24",
-    deadline: "2026-10-25",
-    summary:
-      "Health economics search spanning health systems, delivery, payment, digital health, AI, population health, and related policy areas.",
-    tags: ["Health policy", "Health systems", "Economics", "AI & digital health"],
-    fit: { jacob: 90, madison: 68 },
-    fitReason: {
-      jacob: "Direct overlap with healthcare delivery, health systems, and operations-oriented policy research.",
-      madison: "The call explicitly includes artificial intelligence and digital health, although it is centered on health economics.",
-    },
-    requirements: [
-      "Curriculum vitae",
-      "One research paper, published or unpublished",
-      "Letter describing research interests and teaching experience",
-      "Three references: letters for assistant-level candidates; names and emails may be used for senior candidates",
-    ],
-  },
-  {
     id: "berkeley-JPF05488",
     institution: "University of California, Berkeley",
     school: "College of Letters & Science — Social Sciences",
@@ -169,6 +207,7 @@ const jobs: Job[] = [
     source: "Berkeley",
     sourceUrl: "https://aprecruit.berkeley.edu/JPF05488",
     opened: "2026-08-03",
+    start: "July 1, 2027",
     deadline: "2026-10-15",
     summary:
       "Open-field search naming computational demography, economic demography, health and aging, migration, and population dynamics.",
@@ -199,6 +238,7 @@ const jobs: Job[] = [
     source: "Berkeley",
     sourceUrl: "https://aprecruit.berkeley.edu/JPF05420",
     opened: "2026-07-21",
+    start: "July 1, 2027",
     deadline: "2026-09-15",
     summary:
       "Quantitative marketing search emphasizing analytics, industrial organization, digital marketing, and empirical or analytical methods.",
@@ -219,35 +259,6 @@ const jobs: Job[] = [
     ],
   },
   {
-    id: "stanford-gse-rapid-change",
-    institution: "Stanford University",
-    school: "Graduate School of Education",
-    department: "Graduate School of Education",
-    title: "Open Rank Faculty — Education in a Rapidly Changing World",
-    rank: "Open rank · university tenure line",
-    location: "Stanford, CA",
-    source: "Stanford",
-    sourceUrl:
-      "https://facultypositions.stanford.edu/jobs/open-rank-faculty-position-social-sciences-humanities-of-education-in-a-rapidly-changing-world-stanford-university-california-united-states",
-    opened: "2026-08-04",
-    deadline: "2026-10-15",
-    summary:
-      "Broad social-science search focused on education amid inequality, polarization, technological innovation, and societal change.",
-    tags: ["Policy", "Technology", "Inequality", "Social science"],
-    fit: { jacob: 35, madison: 84 },
-    fitReason: {
-      jacob: "Only a secondary fit unless health-policy methods are paired with a central education question.",
-      madison: "Strong overlap with AI in education, inequality, institutions, and technology-driven social change.",
-    },
-    requirements: [
-      "Brief cover letter",
-      "Combined research and teaching statement, no more than three pages",
-      "Curriculum vitae",
-      "Three scholarly publications or well-developed papers",
-      "Names of three references; letters are requested on submission for non-tenured applicants",
-    ],
-  },
-  {
     id: "berkeley-JPF05417",
     institution: "University of California, Berkeley",
     school: "Haas School of Business",
@@ -258,6 +269,7 @@ const jobs: Job[] = [
     source: "Berkeley",
     sourceUrl: "https://aprecruit.berkeley.edu/JPF05417",
     opened: "2026-07-21",
+    start: "July 1, 2027",
     deadline: "2026-09-15",
     summary:
       "Search for research on entrepreneurship or innovation, especially mechanisms shaping behavior, organizations, performance, and inequality.",
@@ -288,6 +300,7 @@ const jobs: Job[] = [
     source: "Berkeley",
     sourceUrl: "https://aprecruit.berkeley.edu/JPF05416",
     opened: "2026-07-10",
+    start: "July 1, 2027",
     deadline: "2026-09-01",
     summary:
       "Open-field sociology search with no restriction on specialization.",
@@ -320,6 +333,7 @@ const jobs: Job[] = [
     sourceUrl:
       "https://facultypositions.stanford.edu/jobs/open-field-open-rank-faculty-position-in-political-science-stanford-university-california-united-states",
     opened: "2026-07-06",
+    start: "September 1, 2027",
     deadline: "2026-11-01",
     reviewDate: "2026-09-01",
     summary:
@@ -351,6 +365,7 @@ const jobs: Job[] = [
     source: "Berkeley",
     sourceUrl: "https://aprecruit.berkeley.edu/JPF05408",
     opened: "2026-07-28",
+    start: "July 1, 2027",
     deadline: "2026-09-08",
     summary:
       "Political-science search with preference for scholars working in American politics or public law.",
@@ -382,6 +397,7 @@ const jobs: Job[] = [
     source: "Berkeley",
     sourceUrl: "https://aprecruit.berkeley.edu/JPF05422",
     opened: "2026-07-27",
+    start: "July 1, 2027",
     deadline: "2026-11-18",
     summary:
       "Broad finance search covering banking, credit, mortgages, insurance, regulation, financial markets, and empirical or theoretical work.",
@@ -399,6 +415,197 @@ const jobs: Job[] = [
       "Authorization to Release Information form",
       "Three letters of reference for new PhD/postdoc applicants",
       "Optional: teaching evaluations, cover letter, and up to two additional research papers",
+    ],
+  },
+  {
+    id: "ucla-JPF11179",
+    institution: "University of California, Los Angeles",
+    school: "UCLA School of Law",
+    department: "Law",
+    title: "Tenure-Track Assistant Professor of Law — Open Field",
+    rank: "Assistant Professor · tenure track",
+    location: "Los Angeles, CA",
+    source: "UCLA",
+    sourceUrl: "https://recruit.apo.ucla.edu/JPF11179",
+    opened: "2026-07-23",
+    start: "July 1, 2027",
+    deadline: "2027-01-01",
+    reviewDate: "2026-08-23",
+    summary:
+      "Entry-level, open-field law search accepting JD, PhD, or equivalent candidates for a July 2027 appointment.",
+    tags: ["AI governance", "Public law", "Algorithmic fairness", "Open field"],
+    fit: { jacob: 30, madison: 88 },
+    fitReason: {
+      jacob: "A secondary fit through health and public policy, but the law-school market is not the primary disciplinary home.",
+      madison: "A strong substantive match for algorithmic accountability, discrimination, and AI governance; the posting explicitly accepts PhD candidates.",
+    },
+    requirements: [
+      "Curriculum vitae including reference contact information",
+      "Cover letter",
+      "Statement of current research and teaching interests",
+      "Job-talk paper or manuscript",
+      "UCLA Mission Statement",
+      "Reference-check authorization release form",
+    ],
+  },
+  {
+    id: "usc-REQ20173456",
+    institution: "University of Southern California",
+    school: "Sol Price School of Public Policy / Schaeffer Institute",
+    department: "Health Policy & Management",
+    title: "Research Assistant Professor of Health Policy & Management",
+    rank: "Research Assistant Professor · contract/grant-funded research line",
+    location: "Los Angeles, CA",
+    source: "USC",
+    sourceUrl:
+      "https://usccareers.usc.edu/job/los-angeles/research-assistant-professor-of-health-policy-and-management/1209/98163986400",
+    opened: "2026-07-23",
+    start: "Not stated · verify Fall 2027 timing",
+    deadline: null,
+    summary:
+      "Schaeffer-based health-policy and health-economics role covering healthcare value, access, quality, spending, delivery, insurance, and medical innovation.",
+    tags: ["Health policy", "Health economics", "Healthcare delivery", "Public policy"],
+    fit: { jacob: 96, madison: 48 },
+    fitReason: {
+      jacob: "Near-direct substantive fit for health policy, healthcare delivery, real-world evidence, and policy-relevant quantitative research.",
+      madison: "A possible healthcare setting for algorithmic-fairness work, but AI and computational methods are not named in the posting.",
+    },
+    requirements: [
+      "Letter of interest",
+      "Curriculum vitae",
+      "List of three references",
+      "PhD in health policy, economics, public policy, or a related field",
+      "Evidence of grant funding and publication in leading journals",
+    ],
+    note: "This is a research-line, primarily contract- and grant-funded appointment rather than a conventional tenure-track position. The posting gives no start date or fixed deadline; applications continue until filled.",
+  },
+  {
+    id: "usc-REQ20174817",
+    institution: "University of Southern California",
+    school: "Keck School of Medicine",
+    department: "Population & Public Health Sciences — Health Behavior Research",
+    title: "Assistant Professor — Health Behavior Data Analytics",
+    rank: "Assistant Professor · posting describes tenure track",
+    location: "Los Angeles, CA",
+    source: "USC",
+    sourceUrl:
+      "https://usccareers.usc.edu/job/los-angeles/assistant-professor-of-clinical-population-and-public-health-sciences/1209/96857551280",
+    opened: "2026-06-24",
+    start: "Not stated · source currently unavailable",
+    deadline: null,
+    summary:
+      "Computational public-health search using large digital and behavioral data, experiments or quasi-experiments, networks, NLP, computer vision, and machine learning.",
+    tags: ["Public health", "Computational social science", "Digital platforms", "Causal methods"],
+    fit: { jacob: 72, madison: 82 },
+    fitReason: {
+      jacob: "Credible methodological and public-health fit through quasi-experimental designs and large health datasets, though the substance centers on digital health behavior.",
+      madison: "Strong computational-social-science fit through digital platforms, experiments, networks, NLP, and machine learning in a high-stakes health setting.",
+    },
+    requirements: [
+      "Curriculum vitae",
+      "Research statement",
+      "Brief summary of research accomplishments and future goals",
+      "Contact information for three references",
+      "PhD or equivalent in public health, social and behavioral sciences, or a related discipline",
+    ],
+    note: "USC's official job URL returned 404 on August 7, 2026 after the role had been posted June 24. Preserved under the append-only policy so a temporary or early source removal cannot erase it; verify availability before preparing materials.",
+  },
+  {
+    id: "northwestern-54185",
+    institution: "Northwestern University",
+    school: "McCormick School of Engineering",
+    department: "Industrial Engineering & Management Sciences",
+    title: "Faculty Positions in Industrial Engineering & Management Sciences — 2 Positions",
+    rank: "One Assistant Professor · one open-rank · tenure track",
+    location: "Evanston, IL",
+    source: "Northwestern",
+    sourceUrl:
+      "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_JBPST_FL&Action=U&FOCUS=Applicant&SiteId=1&JobOpeningId=54185&PostingSeq=1",
+    opened: "2026-08-07",
+    start: "Expected Fall 2027 · posting does not state date",
+    deadline: "2026-11-16",
+    reviewDate: "2026-10-16",
+    summary:
+      "Two tenure-line searches spanning optimization, AI and machine learning, data-driven decision-making, financial engineering, and healthcare operations.",
+    tags: ["Healthcare operations", "Optimization", "AI and ML", "Engineering"],
+    fit: { jacob: 99, madison: 88 },
+    fitReason: {
+      jacob: "Near-direct match for healthcare operations, simulation and optimization, data-driven decision-making, and interdisciplinary health systems research.",
+      madison: "Strong methodological match through AI, machine learning, and data-driven decisions, with room for responsible-AI and fairness applications.",
+    },
+    requirements: [
+      "Cover letter",
+      "Curriculum vitae",
+      "Research statement",
+      "Teaching statement",
+      "One job-talk-related research paper",
+      "Contact information for three references",
+    ],
+    note: "The posting does not print a start date. It is included as an expected Fall 2027 search based on its October–November 2026 review cycle; verify timing with IEMS before applying.",
+  },
+  {
+    id: "northwestern-53835",
+    institution: "Northwestern University",
+    school: "Kellogg School of Management",
+    department: "Northwestern Innovation Institute / open Kellogg department",
+    title: "Assistant or Untenured Associate Professor — AI and Innovation",
+    rank: "Assistant or untenured Associate Professor · tenure track",
+    location: "Evanston, IL",
+    source: "Northwestern",
+    sourceUrl:
+      "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Action=U&FOCUS=Applicant&JobOpeningId=53835&Page=HRS_APP_JBPST_FL&PostingSeq=1&SiteId=1&page=HRS_APP_JBPST_FL",
+    opened: "2026-08-07",
+    start: "2027–28 academic year",
+    deadline: null,
+    reviewDate: "2026-08-03",
+    summary:
+      "Kellogg-wide search for scholars studying how AI changes innovation, knowledge production, scientific discovery, organizational decisions, or networks.",
+    tags: ["Business school", "AI", "Organizations", "Innovation"],
+    fit: { jacob: 60, madison: 97 },
+    fitReason: {
+      jacob: "A plausible methods and decision-science fit if framed around AI-enabled healthcare organizations or operational innovation.",
+      madison: "Near-direct overlap with responsible AI, organizational decision-making, networks, and the institutional consequences of algorithms.",
+    },
+    requirements: [
+      "Curriculum vitae",
+      "Copies of research papers",
+      "Three letters of recommendation",
+      "Approved dissertation proposal or representative dissertation-progress paper for candidates completing a doctorate",
+      "Applications are reviewed on a rolling basis; the August 3 full-consideration date has passed",
+    ],
+    note: "Still listed as open and reviewed on a rolling basis, but the August 3 full-consideration date has passed. Verify before investing substantial effort.",
+  },
+  {
+    id: "stanford-comparative-politics",
+    institution: "Stanford University",
+    school: "School of Humanities & Sciences",
+    department: "Political Science",
+    title: "Open Rank Faculty Position — Comparative Politics",
+    rank: "Open rank · university tenure line",
+    location: "Stanford, CA",
+    source: "Stanford",
+    sourceUrl:
+      "https://facultypositions.stanford.edu/jobs/comparative-politics-open-rank-faculty-position-in-political-science-stanford-university-california-united-states-e90f6365-53c2-4dcb-8a1a-a5f1b07235c8",
+    opened: "2026-07-06",
+    start: "September 1, 2027",
+    deadline: "2026-11-01",
+    reviewDate: "2026-09-01",
+    summary:
+      "Open-rank comparative-politics search accepting assistant-level candidates for a September 2027 appointment.",
+    tags: ["Policy", "Institutions", "Comparative politics", "AI governance"],
+    fit: { jacob: 25, madison: 70 },
+    fitReason: {
+      jacob: "An indirect fit unless the health-policy agenda is explicitly comparative and institutionally grounded.",
+      madison: "A plausible home for comparative work on algorithmic governance, discrimination, and public-sector AI across institutions.",
+    },
+    requirements: [
+      "Cover letter",
+      "Curriculum vitae including publication list",
+      "Combined research and teaching statement, maximum three single-spaced pages",
+      "Teaching evaluations",
+      "PhD-program transcripts",
+      "Writing sample",
+      "Three letters of recommendation",
     ],
   },
 ];
@@ -425,12 +632,14 @@ function csvCell(value: string | number) {
 
 export function JobDashboard() {
   const [trackers, setTrackers] = useState<TrackerState>(emptyTrackers);
+  const [dismissedJobIds, setDismissedJobIds] = useState<string[]>([]);
   const [hydrated, setHydrated] = useState(false);
   const [activeView, setActiveView] = useState<"jobs" | Person>("jobs");
   const [query, setQuery] = useState("");
   const [source, setSource] = useState<"All" | Job["source"]>("All");
   const [fitFor, setFitFor] = useState<"both" | Person>("both");
   const [sort, setSort] = useState<"deadline" | "fit" | "newest">("deadline");
+  const [showHidden, setShowHidden] = useState(false);
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
@@ -450,6 +659,19 @@ export function JobDashboard() {
           setTrackers(emptyTrackers);
         }
       }
+      const dismissed = window.localStorage.getItem(DISMISSED_KEY);
+      if (dismissed) {
+        try {
+          const parsed = JSON.parse(dismissed) as string[];
+          setDismissedJobIds(
+            Array.isArray(parsed)
+              ? parsed.filter((jobId) => jobs.some((job) => job.id === jobId))
+              : [],
+          );
+        } catch {
+          setDismissedJobIds([]);
+        }
+      }
       setHydrated(true);
     }, 0);
 
@@ -460,9 +682,16 @@ export function JobDashboard() {
     if (hydrated) window.localStorage.setItem(STORAGE_KEY, JSON.stringify(trackers));
   }, [trackers, hydrated]);
 
+  useEffect(() => {
+    if (hydrated) window.localStorage.setItem(DISMISSED_KEY, JSON.stringify(dismissedJobIds));
+  }, [dismissedJobIds, hydrated]);
+
   const filteredJobs = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     return [...jobs]
+      .filter((job) =>
+        showHidden ? dismissedJobIds.includes(job.id) : !dismissedJobIds.includes(job.id),
+      )
       .filter((job) => source === "All" || job.source === source)
       .filter((job) => {
         if (!normalizedQuery) return true;
@@ -487,7 +716,7 @@ export function JobDashboard() {
         const scoreB = fitFor === "both" ? Math.max(b.fit.jacob, b.fit.madison) : b.fit[fitFor];
         return scoreB - scoreA;
       });
-  }, [fitFor, query, sort, source]);
+  }, [dismissedJobIds, fitFor, query, showHidden, sort, source]);
 
   const nextThirty = jobs.filter((job) => {
     if (!job.deadline) return false;
@@ -535,6 +764,16 @@ export function JobDashboard() {
     }));
   }
 
+  function dismissJob(jobId: string) {
+    setDismissedJobIds((current) =>
+      current.includes(jobId) ? current : [...current, jobId],
+    );
+  }
+
+  function restoreJob(jobId: string) {
+    setDismissedJobIds((current) => current.filter((item) => item !== jobId));
+  }
+
   function exportTracker(person: Person) {
     const rows = trackers[person].map((entry) => {
       const job = jobs.find((item) => item.id === entry.jobId)!;
@@ -546,6 +785,7 @@ export function JobDashboard() {
         job.department,
         job.title,
         job.rank,
+        job.start,
         job.deadline ?? "Not stated",
         job.sourceUrl,
         job.requirements.join(" | "),
@@ -560,6 +800,7 @@ export function JobDashboard() {
       "Department",
       "Position",
       "Rank",
+      "Start",
       "Deadline",
       "Posting URL",
       "Requirements",
@@ -598,7 +839,7 @@ export function JobDashboard() {
         <div><strong>{jobs.length}</strong><span>curated openings</span></div>
         <div><strong>{nextThirty}</strong><span>due within 30 days</span></div>
         <div><strong>{trackers.jacob.length + trackers.madison.length}</strong><span>saved applications</span></div>
-        <div><strong>2</strong><span>sources · reviewed {observedAt}</span></div>
+        <div><strong>6</strong><span>sources · reviewed {observedAt}</span></div>
       </section>
 
       {activeView === "jobs" ? (
@@ -607,9 +848,16 @@ export function JobDashboard() {
             <div>
               <p className="eyebrow">Opportunity queue</p>
               <h1>Faculty opportunities</h1>
-              <p>Assistant-professor and open-rank searches with a credible match to at least one research profile.</p>
+              <p>A broad, append-only catalog of assistant-professor and assistant-eligible open-rank searches with a credible match to either profile.</p>
             </div>
-            <p className="result-count">{filteredJobs.length} shown</p>
+            <div className="result-tools">
+              <p className="result-count">{filteredJobs.length} shown</p>
+              {dismissedJobIds.length ? (
+                <button className="hidden-toggle" onClick={() => setShowHidden((current) => !current)}>
+                  {showHidden ? "Back to opportunities" : `Hidden jobs (${dismissedJobIds.length})`}
+                </button>
+              ) : null}
+            </div>
           </div>
 
           <details className="profile-criteria">
@@ -625,7 +873,7 @@ export function JobDashboard() {
               </div>
               <div>
                 <strong>Eligibility</strong>
-                <span>Assistant Professor, or an open-rank search that accepts assistant-level applicants. Berkeley AP Recruit and Stanford Faculty Positions only.</span>
+                <span>Assistant Professor, or an open-rank search accepting assistant-level applicants. Confirmed Fall 2027 roles are labeled; plausible 2027-cycle roles stay visible with a verification flag when the posting omits its start date.</span>
               </div>
             </div>
           </details>
@@ -645,6 +893,10 @@ export function JobDashboard() {
                 <option>All</option>
                 <option>Berkeley</option>
                 <option>Stanford</option>
+                <option>UCLA</option>
+                <option>USC</option>
+                <option>Columbia</option>
+                <option>Northwestern</option>
               </select>
             </label>
             <label>
@@ -666,6 +918,12 @@ export function JobDashboard() {
           </div>
 
           <div className="job-list">
+            {!filteredJobs.length ? (
+              <div className="no-results">
+                <h3>{showHidden ? "No hidden jobs" : "No matching Fall 2027 roles"}</h3>
+                <p>{showHidden ? "Dismissed jobs will appear here." : "This approved source does not currently have an eligible match."}</p>
+              </div>
+            ) : null}
             {filteredJobs.map((job) => {
               const remaining = job.deadline ? daysUntil(job.deadline) : null;
               const urgency = remaining === null ? "later" : remaining <= 30 ? "urgent" : remaining <= 60 ? "soon" : "later";
@@ -708,24 +966,36 @@ export function JobDashboard() {
                         <small>{remaining === null ? "Verify on original posting" : remaining >= 0 ? `${remaining} days remaining` : "Deadline passed"}</small>
                       </div>
                     </div>
-                    {job.reviewDate ? <p className="review-date">Review begins {formatDate(job.reviewDate)}</p> : null}
+                    <p className="start-date"><span>Starts</span><strong>{job.start}</strong></p>
+                    {job.reviewDate ? <p className="review-date">Priority review {formatDate(job.reviewDate)}</p> : null}
                     <div className="fit-scores">
                       <div><span>Jacob fit</span><strong>{job.fit.jacob}</strong></div>
                       <div><span>Madison fit</span><strong>{job.fit.madison}</strong></div>
                     </div>
                     <div className="card-actions">
-                      <button
-                        className={isTracked("jacob", job.id) ? "added jacob" : "add-button jacob"}
-                        onClick={() => addToTracker("jacob", job.id)}
-                      >
-                        {isTracked("jacob", job.id) ? "View Jacob's sheet" : "+ Add for Jacob"}
-                      </button>
-                      <button
-                        className={isTracked("madison", job.id) ? "added madison" : "add-button madison"}
-                        onClick={() => addToTracker("madison", job.id)}
-                      >
-                        {isTracked("madison", job.id) ? "View Madison's sheet" : "+ Add for Madison"}
-                      </button>
+                      {showHidden ? (
+                        <button className="restore-button" onClick={() => restoreJob(job.id)}>
+                          Restore to opportunities
+                        </button>
+                      ) : (
+                        <>
+                          <button
+                            className={isTracked("jacob", job.id) ? "added jacob" : "add-button jacob"}
+                            onClick={() => addToTracker("jacob", job.id)}
+                          >
+                            {isTracked("jacob", job.id) ? "View Jacob's sheet" : "+ Add for Jacob"}
+                          </button>
+                          <button
+                            className={isTracked("madison", job.id) ? "added madison" : "add-button madison"}
+                            onClick={() => addToTracker("madison", job.id)}
+                          >
+                            {isTracked("madison", job.id) ? "View Madison's sheet" : "+ Add for Madison"}
+                          </button>
+                          <button className="dismiss-button" onClick={() => dismissJob(job.id)}>
+                            Not interested
+                          </button>
+                        </>
+                      )}
                       <a href={job.sourceUrl} target="_blank" rel="noreferrer">Open original posting ↗</a>
                     </div>
                   </aside>
@@ -811,6 +1081,7 @@ function TrackerSheet({
                 <div className="tracker-deadline">
                   <span>Deadline</span>
                   <strong>{job.deadline ? formatDate(job.deadline) : "Not stated"}</strong>
+                  <small>Starts {job.start}</small>
                 </div>
               </div>
 
