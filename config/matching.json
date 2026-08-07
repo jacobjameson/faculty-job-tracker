@@ -1,0 +1,66 @@
+{
+  "cycle": {
+    "target_start": "Fall 2027",
+    "earliest_posting_date": "2026-05-01",
+    "default_start_label": "Not stated · likely Fall 2027 cycle"
+  },
+  "eligibility": {
+    "include_title_patterns": [
+      "assistant professor",
+      "open rank",
+      "open-rank",
+      "assistant, associate",
+      "assistant/associate",
+      "assistant or associate"
+    ],
+    "exclude_title_patterns": [
+      "adjunct",
+      "visiting",
+      "lecturer",
+      "instructor",
+      "teaching-track",
+      "teaching track",
+      "clinical",
+      "clinician educator",
+      "clinical assistant",
+      "professor of clinical",
+      "associate professor of clinical",
+      "professor of practice",
+      "professor of the practice"
+    ]
+  },
+  "profiles": {
+    "jacob": [
+      { "label": "Healthcare operations", "weight": 20, "terms": ["healthcare operations", "health care operations", "health systems", "healthcare delivery", "health care delivery", "service operations", "patient flow"] },
+      { "label": "Health policy", "weight": 18, "terms": ["health policy", "public health policy", "medicare", "medicaid", "provider payment", "insurance design"] },
+      { "label": "Causal inference", "weight": 18, "terms": ["causal inference", "quasi-experimental", "quasi experimental", "treatment effects", "program evaluation"] },
+      { "label": "Real-world evidence", "weight": 18, "terms": ["real-world evidence", "real world evidence", "electronic health record", "administrative claims", "comparative effectiveness"] },
+      { "label": "Decision science", "weight": 18, "terms": ["decision science", "decision-making", "decision making", "operations research", "optimization", "simulation", "reinforcement learning"] },
+      { "label": "Health economics", "weight": 16, "terms": ["health economics", "health economist", "healthcare financing", "health care financing", "medical innovation"] },
+      { "label": "Precision health", "weight": 10, "terms": ["precision medicine", "personalized medicine", "precision health", "population health"] }
+    ],
+    "madison": [
+      { "label": "Algorithmic fairness", "weight": 22, "terms": ["algorithmic fairness", "algorithmic discrimination", "fairness", "algorithmic accountability"] },
+      { "label": "Responsible AI", "weight": 20, "terms": ["responsible ai", "ai governance", "artificial intelligence governance", "ai ethics", "algorithmic governance"] },
+      { "label": "Inequality", "weight": 16, "terms": ["social inequality", "economic inequality", "algorithmic discrimination", "racial discrimination", "health disparities", "civil rights"] },
+      { "label": "Computational social science", "weight": 20, "terms": ["computational social science", "computational methods", "social network analysis", "digital trace", "field experiment"] },
+      { "label": "AI and data", "weight": 13, "terms": ["artificial intelligence", "ai innovation", "machine learning", "data science", "natural language processing", "large language model", "digital platform"] },
+      { "label": "Institutions and organizations", "weight": 11, "terms": ["organizational decision", "organizations", "institutions", "public sector", "technology and society"] },
+      { "label": "Application domains", "weight": 10, "terms": ["algorithmic lending", "credit decisions", "criminal justice", "education policy", "educational technology", "ai in education", "healthcare algorithms", "health care algorithms"] }
+    ]
+  },
+  "school_signals": [
+    "business",
+    "management",
+    "public policy",
+    "public health",
+    "health policy",
+    "engineering",
+    "information",
+    "social science",
+    "communication",
+    "education",
+    "law"
+  ],
+  "minimum_fit_score": 58
+}

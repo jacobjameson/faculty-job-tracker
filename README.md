@@ -15,6 +15,7 @@ Live dashboard: <https://jacobjameson.com/faculty-job-tracker/>
 - Status, notes, and requirement checklists saved in the current browser
 - CSV export for private backup or import into Google Sheets
 - RSS feed at `jobs.xml`
+- Daily automated refresh with a source-by-source audit report
 
 ## Matching profiles
 
@@ -51,12 +52,33 @@ GitHub Pages is a public website host. The URL may be obscure, but the page itse
 
 ## RSS and email alerts
 
-The static RSS feed contains the same curated openings as the dashboard. An RSS-to-email service can subscribe to the deployed `jobs.xml` URL. The feed will gain new items when the source-refresh process updates the curated data; automated source collection and email delivery are the next phase.
+The RSS feed contains the same openings as the dashboard:
 
-## Next build step
+<https://jacobjameson.com/faculty-job-tracker/jobs.xml>
 
-Move the job records into a generated data file, add source-specific collectors, and schedule a GitHub Action to merge new results from only the approved sources. The merge must preserve `catalog-history.json`, emit an audit report, and archive confirmed closures rather than replacing the catalog wholesale.
+To receive email, create a free Feedrabbit subscription at <https://feedrabbit.com/> using that feed URL, then confirm the verification email. Each of you can subscribe independently. Feedrabbit sends mail when the feed gains a new stable job ID; no email addresses or credentials are stored in this repository.
+
+## Automated refresh
+
+GitHub Actions runs `.github/workflows/refresh-jobs.yml` every day at **15:15 UTC** (8:15 a.m. Pacific during daylight time, 7:15 a.m. during standard time). It:
+
+1. Scans only the six approved hostnames in `config/sources.json`.
+2. Keeps only assistant-professor and assistant-eligible open-rank searches matching at least one profile and the Fall 2027 cycle.
+3. Appends newly admitted jobs without deleting or replacing earlier jobs.
+4. Regenerates the RSS feed and `data/refresh-report.json`.
+5. Runs lint, tests, and both production builds before committing data and deploying Pages.
+
+To refresh immediately, open the repository's **Actions** tab, choose **Refresh jobs and deploy dashboard**, and select **Run workflow**. Routine daily updates require no action.
+
+The dashboard shows the latest source status. A blocked source is reported visibly and leaves the existing catalog untouched; it is never interpreted as “zero jobs.” Columbia currently returns a Cloudflare challenge to automated requests, so that source may show as needing attention until its site permits the scheduled runner.
+
+Local commands:
+
+```bash
+npm run refresh:jobs:dry  # inspect proposed additions without changing files
+npm run refresh:jobs      # append matches and update RSS/report
+```
 
 ## GitHub Pages
 
-The included workflow builds a static export and publishes it whenever `main` is pushed. After creating the GitHub repository, select **GitHub Actions** as the Pages source under repository settings. Tracker information remains browser-local and is never written to the repository.
+The deployment workflow publishes a static export whenever `main` is pushed. The scheduled refresh workflow also deploys after a successful collection and validation run. Tracker information remains browser-local and is never written to the repository.

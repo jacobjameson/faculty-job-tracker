@@ -1,0 +1,103 @@
+{
+  "refreshed_at": "2026-08-07T14:12:21.168Z",
+  "mode": "write",
+  "policy": "append-only",
+  "approved_sources": 6,
+  "successful_sources": 5,
+  "source_errors": 1,
+  "source_warnings": 0,
+  "existing_jobs_before": 18,
+  "jobs_added": 2,
+  "total_jobs_after": 20,
+  "added_job_ids": [
+    "berkeley-JPF05436",
+    "northwestern-54200"
+  ],
+  "added_jobs": [
+    {
+      "id": "berkeley-JPF05436",
+      "title": "Assistant Professor - Civil Rights - School of Law",
+      "source": "Berkeley",
+      "fit": {
+        "jacob": 0,
+        "madison": 67
+      },
+      "start": "July 1, 2027",
+      "url": "https://aprecruit.berkeley.edu/JPF05436"
+    },
+    {
+      "id": "northwestern-54200",
+      "title": "Open Rank Faculty Position in AI Innovation",
+      "source": "Northwestern",
+      "fit": {
+        "jacob": 43,
+        "madison": 59
+      },
+      "start": "2027–28 academic year",
+      "url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_JBPST_FL&Action=U&FOCUS=Applicant&SiteId=1&JobOpeningId=54200&PostingSeq=1"
+    }
+  ],
+  "sources": [
+    {
+      "source": "Berkeley",
+      "listing_url": "https://aprecruit.berkeley.edu/apply",
+      "status": "ok",
+      "discovered": 160,
+      "eligible_titles": 29,
+      "evaluated": 29,
+      "matched": 7,
+      "added": 1
+    },
+    {
+      "source": "Stanford",
+      "listing_url": "https://facultypositions.stanford.edu/jobs/search",
+      "status": "ok",
+      "discovered": 114,
+      "eligible_titles": 29,
+      "evaluated": 29,
+      "matched": 4,
+      "added": 0
+    },
+    {
+      "source": "UCLA",
+      "listing_url": "https://recruit.apo.ucla.edu/apply",
+      "status": "ok",
+      "discovered": 179,
+      "eligible_titles": 5,
+      "evaluated": 5,
+      "matched": 1,
+      "added": 0
+    },
+    {
+      "source": "USC",
+      "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
+      "status": "ok",
+      "discovered": 307,
+      "eligible_titles": 26,
+      "evaluated": 26,
+      "matched": 1,
+      "added": 0
+    },
+    {
+      "source": "Columbia",
+      "listing_url": "https://academic.careers.columbia.edu",
+      "status": "error",
+      "discovered": 0,
+      "eligible_titles": 0,
+      "evaluated": 0,
+      "matched": 0,
+      "added": 0,
+      "error": "403 Forbidden from https://academic.careers.columbia.edu/"
+    },
+    {
+      "source": "Northwestern",
+      "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
+      "status": "ok",
+      "discovered": 50,
+      "eligible_titles": 9,
+      "evaluated": 9,
+      "matched": 1,
+      "added": 1
+    }
+  ]
+}

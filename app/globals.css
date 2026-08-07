@@ -139,6 +139,21 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .criteria-grid strong { font-size: 12px; }
 .criteria-grid span { color: var(--muted); font-size: 11px; line-height: 1.55; }
 
+.refresh-status {
+  margin: 0 0 18px;
+  border: 1px solid #cad9cd;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #edf5ee;
+}
+.refresh-status.has-errors { border-color: #e2cfac; background: #fff8e9; }
+.source-status-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 16px 0 3px; }
+.source-status-grid div { display: grid; gap: 3px; border-radius: 9px; padding: 10px; background: rgba(255, 255, 255, 0.62); }
+.source-status-grid div.error { background: #fff1e5; }
+.source-status-grid strong { font-size: 11px; }
+.source-status-grid span, .source-status-grid small { color: var(--muted); font-size: 10px; line-height: 1.4; }
+.source-status-grid small { color: #80511f; }
+
 .filters {
   display: grid;
   grid-template-columns: minmax(250px, 1.7fr) repeat(3, minmax(130px, 0.7fr));
@@ -287,6 +302,7 @@ footer a { color: var(--forest); font-weight: 700; }
   .job-side { border-top: 1px solid var(--line); border-left: 0; }
   .details-grid { grid-template-columns: 1fr; }
   .criteria-grid { grid-template-columns: 1fr; }
+  .source-status-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 620px) {
@@ -300,6 +316,7 @@ footer a { color: var(--forest); font-weight: 700; }
   .search-field { grid-column: auto; }
   .job-main, .job-side, .tracker-card { padding: 20px; }
   .fit-scores, .tracker-grid, .checklist { grid-template-columns: 1fr; }
+  .source-status-grid { grid-template-columns: 1fr; }
   .tracker-deadline { text-align: left; }
   .tracker-actions { align-items: flex-start; flex-direction: column; }
   .privacy-callout, footer { flex-direction: column; }
