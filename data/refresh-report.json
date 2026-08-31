@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-08-30T15:23:01.745Z",
+  "refreshed_at": "2026-08-31T15:26:45.443Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -16,7 +16,7 @@
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 170,
+      "discovered": 169,
       "eligible_titles": 40,
       "evaluated": 40,
       "matched": 7,
@@ -36,7 +36,7 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 197,
+      "discovered": 195,
       "eligible_titles": 8,
       "evaluated": 8,
       "matched": 1,
@@ -68,8 +68,8 @@
       "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
       "status": "ok",
       "discovered": 50,
-      "eligible_titles": 7,
-      "evaluated": 7,
+      "eligible_titles": 5,
+      "evaluated": 5,
       "matched": 0,
       "added": 0
     }
