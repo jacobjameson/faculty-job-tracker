@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-09-02T15:30:34.103Z",
+  "refreshed_at": "2026-09-03T15:29:13.056Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -26,9 +26,9 @@
       "source": "Stanford",
       "listing_url": "https://facultypositions.stanford.edu/jobs/search",
       "status": "ok",
-      "discovered": 121,
-      "eligible_titles": 35,
-      "evaluated": 35,
+      "discovered": 122,
+      "eligible_titles": 36,
+      "evaluated": 36,
       "matched": 4,
       "added": 0
     },
@@ -46,9 +46,9 @@
       "source": "USC",
       "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
       "status": "ok",
-      "discovered": 297,
-      "eligible_titles": 32,
-      "evaluated": 32,
+      "discovered": 295,
+      "eligible_titles": 31,
+      "evaluated": 31,
       "matched": 1,
       "added": 0
     },
@@ -68,8 +68,8 @@
       "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
       "status": "ok",
       "discovered": 50,
-      "eligible_titles": 7,
-      "evaluated": 7,
+      "eligible_titles": 5,
+      "evaluated": 5,
       "matched": 0,
       "added": 0
     }
