@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-09-05T15:22:28.412Z",
+  "refreshed_at": "2026-09-06T15:22:47.046Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -46,7 +46,7 @@
       "source": "USC",
       "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
       "status": "ok",
-      "discovered": 297,
+      "discovered": 296,
       "eligible_titles": 32,
       "evaluated": 32,
       "matched": 1,
