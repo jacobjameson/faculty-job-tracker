@@ -750,5 +750,40 @@
       "Representative publications"
     ],
     "note": "Automatically discovered from the approved Northwestern source on 2026-08-07. Dates and requirements are extracted conservatively; verify the official posting before applying."
+  },
+  {
+    "id": "berkeley-JPF05482",
+    "institution": "University of California, Berkeley",
+    "school": "School Of Information",
+    "department": "school of information / school of information",
+    "title": "Assistant Professor - Human-Computer Interaction (HCI) - School of Information",
+    "rank": "Assistant Professor or assistant-eligible search",
+    "location": "Berkeley, CA",
+    "source": "Berkeley",
+    "sourceUrl": "https://aprecruit.berkeley.edu/JPF05482",
+    "opened": "2026-09-08",
+    "start": "July 1, 2027",
+    "deadline": "2026-11-02",
+    "reviewDate": "2026-11-02",
+    "summary": "HCI researchers design and study new ways for people to interact, collaborate, create, work, and make decisions with technology, and investigate how emerging computing systems shape human capabilities, practices, organizations, and society. Methods include the design and development of novel systems, experimentation, qualitative and ethnographic research, participatory design, computational methods, field studies,…",
+    "tags": [
+      "Computational social science",
+      "Institutions and organizations"
+    ],
+    "fit": {
+      "jacob": 0,
+      "madison": 61
+    },
+    "fitReason": {
+      "jacob": "Secondary fit through the department or interdisciplinary scope; review before applying.",
+      "madison": "Automated match on computational social science, institutions and organizations."
+    },
+    "requirements": [
+      "Curriculum vitae",
+      "Cover letter",
+      "Research statement",
+      "Reference letters or reference contact information"
+    ],
+    "note": "Automatically discovered from the approved Berkeley source on 2026-09-09. Dates and requirements are extracted conservatively; verify the official posting before applying."
   }
 ]

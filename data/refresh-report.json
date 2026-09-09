@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-09-08T15:28:14.661Z",
+  "refreshed_at": "2026-09-09T15:26:41.817Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -7,26 +7,40 @@
   "source_errors": 1,
   "source_warnings": 0,
   "existing_jobs_before": 20,
-  "jobs_added": 0,
-  "total_jobs_after": 20,
-  "added_job_ids": [],
-  "added_jobs": [],
+  "jobs_added": 1,
+  "total_jobs_after": 21,
+  "added_job_ids": [
+    "berkeley-JPF05482"
+  ],
+  "added_jobs": [
+    {
+      "id": "berkeley-JPF05482",
+      "title": "Assistant Professor - Human-Computer Interaction (HCI) - School of Information",
+      "source": "Berkeley",
+      "fit": {
+        "jacob": 0,
+        "madison": 61
+      },
+      "start": "July 1, 2027",
+      "url": "https://aprecruit.berkeley.edu/JPF05482"
+    }
+  ],
   "sources": [
     {
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 174,
-      "eligible_titles": 48,
-      "evaluated": 48,
+      "discovered": 172,
+      "eligible_titles": 47,
+      "evaluated": 47,
       "matched": 6,
-      "added": 0
+      "added": 1
     },
     {
       "source": "Stanford",
       "listing_url": "https://facultypositions.stanford.edu/jobs/search",
       "status": "ok",
-      "discovered": 125,
+      "discovered": 124,
       "eligible_titles": 37,
       "evaluated": 37,
       "matched": 4,
@@ -36,9 +50,9 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 189,
-      "eligible_titles": 10,
-      "evaluated": 10,
+      "discovered": 192,
+      "eligible_titles": 11,
+      "evaluated": 11,
       "matched": 1,
       "added": 0
     },
@@ -46,9 +60,9 @@
       "source": "USC",
       "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
       "status": "ok",
-      "discovered": 296,
-      "eligible_titles": 32,
-      "evaluated": 32,
+      "discovered": 294,
+      "eligible_titles": 31,
+      "evaluated": 31,
       "matched": 1,
       "added": 0
     },
@@ -68,8 +82,8 @@
       "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
       "status": "ok",
       "discovered": 50,
-      "eligible_titles": 8,
-      "evaluated": 8,
+      "eligible_titles": 7,
+      "evaluated": 7,
       "matched": 0,
       "added": 0
     }
