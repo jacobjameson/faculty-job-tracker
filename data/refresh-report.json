@@ -1,30 +1,16 @@
 {
-  "refreshed_at": "2026-09-09T15:26:41.817Z",
+  "refreshed_at": "2026-09-10T15:26:36.917Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
   "successful_sources": 5,
   "source_errors": 1,
   "source_warnings": 0,
-  "existing_jobs_before": 20,
-  "jobs_added": 1,
+  "existing_jobs_before": 21,
+  "jobs_added": 0,
   "total_jobs_after": 21,
-  "added_job_ids": [
-    "berkeley-JPF05482"
-  ],
-  "added_jobs": [
-    {
-      "id": "berkeley-JPF05482",
-      "title": "Assistant Professor - Human-Computer Interaction (HCI) - School of Information",
-      "source": "Berkeley",
-      "fit": {
-        "jacob": 0,
-        "madison": 61
-      },
-      "start": "July 1, 2027",
-      "url": "https://aprecruit.berkeley.edu/JPF05482"
-    }
-  ],
+  "added_job_ids": [],
+  "added_jobs": [],
   "sources": [
     {
       "source": "Berkeley",
@@ -34,15 +20,15 @@
       "eligible_titles": 47,
       "evaluated": 47,
       "matched": 6,
-      "added": 1
+      "added": 0
     },
     {
       "source": "Stanford",
       "listing_url": "https://facultypositions.stanford.edu/jobs/search",
       "status": "ok",
-      "discovered": 124,
-      "eligible_titles": 37,
-      "evaluated": 37,
+      "discovered": 125,
+      "eligible_titles": 38,
+      "evaluated": 38,
       "matched": 4,
       "added": 0
     },
@@ -50,7 +36,7 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 192,
+      "discovered": 193,
       "eligible_titles": 11,
       "evaluated": 11,
       "matched": 1,
@@ -82,8 +68,8 @@
       "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
       "status": "ok",
       "discovered": 50,
-      "eligible_titles": 7,
-      "evaluated": 7,
+      "eligible_titles": 4,
+      "evaluated": 4,
       "matched": 0,
       "added": 0
     }
