@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-09-10T15:26:36.917Z",
+  "refreshed_at": "2026-09-11T15:25:47.676Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -16,9 +16,9 @@
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 172,
-      "eligible_titles": 47,
-      "evaluated": 47,
+      "discovered": 174,
+      "eligible_titles": 49,
+      "evaluated": 49,
       "matched": 6,
       "added": 0
     },
@@ -36,9 +36,9 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 193,
-      "eligible_titles": 11,
-      "evaluated": 11,
+      "discovered": 194,
+      "eligible_titles": 12,
+      "evaluated": 12,
       "matched": 1,
       "added": 0
     },
