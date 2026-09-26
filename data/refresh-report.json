@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-09-25T15:28:00.243Z",
+  "refreshed_at": "2026-09-26T15:25:08.849Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -16,9 +16,9 @@
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 176,
-      "eligible_titles": 49,
-      "evaluated": 49,
+      "discovered": 174,
+      "eligible_titles": 50,
+      "evaluated": 50,
       "matched": 4,
       "added": 0
     },
@@ -26,9 +26,9 @@
       "source": "Stanford",
       "listing_url": "https://facultypositions.stanford.edu/jobs/search",
       "status": "ok",
-      "discovered": 125,
-      "eligible_titles": 37,
-      "evaluated": 37,
+      "discovered": 127,
+      "eligible_titles": 38,
+      "evaluated": 38,
       "matched": 4,
       "added": 0
     },
@@ -36,7 +36,7 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 204,
+      "discovered": 203,
       "eligible_titles": 17,
       "evaluated": 17,
       "matched": 1,
@@ -68,8 +68,8 @@
       "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
       "status": "ok",
       "discovered": 50,
-      "eligible_titles": 0,
-      "evaluated": 0,
+      "eligible_titles": 2,
+      "evaluated": 2,
       "matched": 0,
       "added": 0
     }
