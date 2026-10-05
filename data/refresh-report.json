@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-10-04T16:50:22.724Z",
+  "refreshed_at": "2026-10-05T15:31:28.514Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -36,7 +36,7 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 201,
+      "discovered": 202,
       "eligible_titles": 18,
       "evaluated": 18,
       "matched": 1,
