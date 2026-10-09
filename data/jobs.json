@@ -785,5 +785,41 @@
       "Reference letters or reference contact information"
     ],
     "note": "Automatically discovered from the approved Berkeley source on 2026-09-09. Dates and requirements are extracted conservatively; verify the official posting before applying."
+  },
+  {
+    "id": "berkeley-JPF05568",
+    "institution": "University of California, Berkeley",
+    "school": "Academic unit listed in official posting",
+    "department": "ctr for computational bio / college of computing, data science, and society",
+    "title": "Assistant/Associate/Full Professor - Computational Biomedicine - Center for Computational Biology",
+    "rank": "Assistant Professor or assistant-eligible search",
+    "location": "Berkeley, CA",
+    "source": "Berkeley",
+    "sourceUrl": "https://aprecruit.berkeley.edu/JPF05568",
+    "opened": "2026-10-08",
+    "start": "July 1, 2027",
+    "deadline": "2026-11-18",
+    "reviewDate": "2026-11-18",
+    "summary": "ctr for computational bio / college of computing, data science, and society. About the Baker Computational Biomedicine Initiative: The BCBI is a joint program recently launched by UC Berkeley and UC San Francisco (UCSF) to develop the frontier of artificial intelligence (AI), machine learning, computer science, and statistics to accelerate advances in biomedical research.",
+    "tags": [
+      "Computational social science",
+      "AI and data"
+    ],
+    "fit": {
+      "jacob": 0,
+      "madison": 68
+    },
+    "fitReason": {
+      "jacob": "Secondary fit through the department or interdisciplinary scope; review before applying.",
+      "madison": "Automated match on computational social science, ai and data."
+    },
+    "requirements": [
+      "Curriculum vitae",
+      "Cover letter",
+      "Research statement",
+      "Teaching statement",
+      "Reference letters or reference contact information"
+    ],
+    "note": "Automatically discovered from the approved Berkeley source on 2026-10-09. Dates and requirements are extracted conservatively; verify the official posting before applying."
   }
 ]
