@@ -1,40 +1,26 @@
 {
-  "refreshed_at": "2026-10-09T15:28:40.178Z",
+  "refreshed_at": "2026-10-10T15:26:59.491Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
   "successful_sources": 5,
   "source_errors": 1,
   "source_warnings": 0,
-  "existing_jobs_before": 21,
-  "jobs_added": 1,
+  "existing_jobs_before": 22,
+  "jobs_added": 0,
   "total_jobs_after": 22,
-  "added_job_ids": [
-    "berkeley-JPF05568"
-  ],
-  "added_jobs": [
-    {
-      "id": "berkeley-JPF05568",
-      "title": "Assistant/Associate/Full Professor - Computational Biomedicine - Center for Computational Biology",
-      "source": "Berkeley",
-      "fit": {
-        "jacob": 0,
-        "madison": 68
-      },
-      "start": "July 1, 2027",
-      "url": "https://aprecruit.berkeley.edu/JPF05568"
-    }
-  ],
+  "added_job_ids": [],
+  "added_jobs": [],
   "sources": [
     {
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 172,
-      "eligible_titles": 43,
-      "evaluated": 43,
+      "discovered": 171,
+      "eligible_titles": 41,
+      "evaluated": 41,
       "matched": 4,
-      "added": 1
+      "added": 0
     },
     {
       "source": "Stanford",
@@ -50,7 +36,7 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 206,
+      "discovered": 208,
       "eligible_titles": 18,
       "evaluated": 18,
       "matched": 1,
@@ -60,7 +46,7 @@
       "source": "USC",
       "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
       "status": "ok",
-      "discovered": 310,
+      "discovered": 312,
       "eligible_titles": 34,
       "evaluated": 34,
       "matched": 1,
