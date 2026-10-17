@@ -821,5 +821,38 @@
       "Reference letters or reference contact information"
     ],
     "note": "Automatically discovered from the approved Berkeley source on 2026-10-09. Dates and requirements are extracted conservatively; verify the official posting before applying."
+  },
+  {
+    "id": "usc-REQ20181984",
+    "institution": "University of Southern California",
+    "school": "School of Dentistry of USCDornsife College of Letters",
+    "department": "Chemistry in the Dana and David Dornsife College of Letters, Arts, and Sciences",
+    "title": "Assistant Professor in Theoretical/Computational Chemistry",
+    "rank": "Assistant Professor or assistant-eligible search",
+    "location": "Los Angeles, CA",
+    "source": "USC",
+    "sourceUrl": "https://usccareers.usc.edu/job/los-angeles/assistant-professor-in-theoretical-computational-chemistry/1209/102039035376",
+    "opened": "2026-10-17",
+    "start": "Fall 2027",
+    "deadline": null,
+    "summary": "Learn More September 10, 2026 Culture & Community Blog - Hub Page Related Content AI at USC At USC, artificial intelligence is more than just code.",
+    "tags": [
+      "Computational social science",
+      "AI and data"
+    ],
+    "fit": {
+      "jacob": 0,
+      "madison": 58
+    },
+    "fitReason": {
+      "jacob": "Secondary fit through the department or interdisciplinary scope; review before applying.",
+      "madison": "Automated match on computational social science, ai and data."
+    },
+    "requirements": [
+      "Curriculum vitae",
+      "Cover letter",
+      "Reference letters or reference contact information"
+    ],
+    "note": "Automatically discovered from the approved USC source on 2026-10-17. Dates and requirements are extracted conservatively; verify the official posting before applying."
   }
 ]
