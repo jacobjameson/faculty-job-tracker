@@ -1,36 +1,22 @@
 {
-  "refreshed_at": "2026-10-17T15:23:47.582Z",
+  "refreshed_at": "2026-10-18T15:24:16.728Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
   "successful_sources": 5,
   "source_errors": 1,
   "source_warnings": 0,
-  "existing_jobs_before": 22,
-  "jobs_added": 1,
+  "existing_jobs_before": 23,
+  "jobs_added": 0,
   "total_jobs_after": 23,
-  "added_job_ids": [
-    "usc-REQ20181984"
-  ],
-  "added_jobs": [
-    {
-      "id": "usc-REQ20181984",
-      "title": "Assistant Professor in Theoretical/Computational Chemistry",
-      "source": "USC",
-      "fit": {
-        "jacob": 0,
-        "madison": 58
-      },
-      "start": "Fall 2027",
-      "url": "https://usccareers.usc.edu/job/los-angeles/assistant-professor-in-theoretical-computational-chemistry/1209/102039035376"
-    }
-  ],
+  "added_job_ids": [],
+  "added_jobs": [],
   "sources": [
     {
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 174,
+      "discovered": 176,
       "eligible_titles": 36,
       "evaluated": 36,
       "matched": 3,
@@ -50,9 +36,9 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 221,
-      "eligible_titles": 18,
-      "evaluated": 18,
+      "discovered": 219,
+      "eligible_titles": 17,
+      "evaluated": 17,
       "matched": 1,
       "added": 0
     },
@@ -64,7 +50,7 @@
       "eligible_titles": 35,
       "evaluated": 35,
       "matched": 2,
-      "added": 1
+      "added": 0
     },
     {
       "source": "Columbia",
