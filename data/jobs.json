@@ -854,5 +854,41 @@
       "Reference letters or reference contact information"
     ],
     "note": "Automatically discovered from the approved USC source on 2026-10-17. Dates and requirements are extracted conservatively; verify the official posting before applying."
+  },
+  {
+    "id": "berkeley-JPF05519",
+    "institution": "University of California, Berkeley",
+    "school": "Academic unit listed in official posting",
+    "department": "industrial eng & ops res / college of engineering",
+    "title": "Assistant Professor - Fintech and Cyber Risk - Industrial Engineering & Operations Research",
+    "rank": "Assistant Professor or assistant-eligible search",
+    "location": "Berkeley, CA",
+    "source": "Berkeley",
+    "sourceUrl": "https://aprecruit.berkeley.edu/JPF05519",
+    "opened": "2026-10-20",
+    "start": "July 1, 2027",
+    "deadline": "2026-12-01",
+    "reviewDate": "2026-12-01",
+    "summary": "Assistant Professor - Fintech and Cyber Risk - Industrial Engineering & Operations Research. Position description Assistant Professor The Department of Industrial Engineering & Operations Research (IEOR) at the University of California, Berkeley, welcomes applications for a full-time tenure-track Assistant Professor.",
+    "tags": [
+      "Decision science",
+      "AI and data"
+    ],
+    "fit": {
+      "jacob": 58,
+      "madison": 43
+    },
+    "fitReason": {
+      "jacob": "Automated match on decision science.",
+      "madison": "Automated match on ai and data."
+    },
+    "requirements": [
+      "Curriculum vitae",
+      "Cover letter",
+      "Research statement",
+      "Teaching statement",
+      "Reference letters or reference contact information"
+    ],
+    "note": "Automatically discovered from the approved Berkeley source on 2026-10-21. Dates and requirements are extracted conservatively; verify the official posting before applying."
   }
 ]
