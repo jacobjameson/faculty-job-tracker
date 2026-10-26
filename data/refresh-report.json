@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-10-25T15:24:58.345Z",
+  "refreshed_at": "2026-10-26T15:40:33.269Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -16,9 +16,9 @@
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 175,
-      "eligible_titles": 30,
-      "evaluated": 30,
+      "discovered": 172,
+      "eligible_titles": 29,
+      "evaluated": 29,
       "matched": 4,
       "added": 0
     },
