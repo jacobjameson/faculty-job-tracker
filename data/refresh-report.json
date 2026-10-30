@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-10-29T15:22:44.829Z",
+  "refreshed_at": "2026-10-30T15:21:16.099Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -16,9 +16,9 @@
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 170,
-      "eligible_titles": 28,
-      "evaluated": 28,
+      "discovered": 168,
+      "eligible_titles": 26,
+      "evaluated": 26,
       "matched": 4,
       "added": 0
     },
@@ -36,9 +36,9 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 228,
-      "eligible_titles": 18,
-      "evaluated": 18,
+      "discovered": 232,
+      "eligible_titles": 19,
+      "evaluated": 19,
       "matched": 1,
       "added": 0
     },
@@ -47,8 +47,8 @@
       "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
       "status": "ok",
       "discovered": 329,
-      "eligible_titles": 41,
-      "evaluated": 41,
+      "eligible_titles": 40,
+      "evaluated": 40,
       "matched": 2,
       "added": 0
     },
