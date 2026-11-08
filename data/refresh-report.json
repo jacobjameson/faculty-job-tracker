@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-11-07T15:20:17.453Z",
+  "refreshed_at": "2026-11-08T15:20:14.276Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -16,9 +16,9 @@
       "source": "Berkeley",
       "listing_url": "https://aprecruit.berkeley.edu/apply",
       "status": "ok",
-      "discovered": 158,
-      "eligible_titles": 21,
-      "evaluated": 21,
+      "discovered": 157,
+      "eligible_titles": 20,
+      "evaluated": 20,
       "matched": 3,
       "added": 0
     },
@@ -46,10 +46,10 @@
       "source": "USC",
       "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
       "status": "ok",
-      "discovered": 328,
-      "eligible_titles": 43,
-      "evaluated": 43,
-      "matched": 1,
+      "discovered": 348,
+      "eligible_titles": 45,
+      "evaluated": 45,
+      "matched": 2,
       "added": 0
     },
     {
