@@ -1,5 +1,5 @@
 {
-  "refreshed_at": "2026-11-16T15:28:57.698Z",
+  "refreshed_at": "2026-11-17T15:21:00.232Z",
   "mode": "write",
   "policy": "append-only",
   "approved_sources": 6,
@@ -36,9 +36,9 @@
       "source": "UCLA",
       "listing_url": "https://recruit.apo.ucla.edu/apply",
       "status": "ok",
-      "discovered": 221,
-      "eligible_titles": 17,
-      "evaluated": 17,
+      "discovered": 222,
+      "eligible_titles": 18,
+      "evaluated": 18,
       "matched": 1,
       "added": 0
     },
@@ -46,7 +46,7 @@
       "source": "USC",
       "listing_url": "https://usccareers.usc.edu/category/faculty-jobs/1728-1209/40020/1",
       "status": "ok",
-      "discovered": 348,
+      "discovered": 349,
       "eligible_titles": 45,
       "evaluated": 45,
       "matched": 2,
@@ -68,8 +68,8 @@
       "listing_url": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U",
       "status": "ok",
       "discovered": 50,
-      "eligible_titles": 2,
-      "evaluated": 2,
+      "eligible_titles": 1,
+      "evaluated": 1,
       "matched": 0,
       "added": 0
     }
